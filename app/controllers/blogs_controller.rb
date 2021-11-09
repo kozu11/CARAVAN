@@ -9,6 +9,10 @@ class BlogsController < ApplicationController
   blog.save
   redirect_to blogs_path
  end
+ 
+ def index
+  @blogs = Blog.all
+ end
 
 private
  def blog_params
